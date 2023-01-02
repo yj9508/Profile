@@ -1,0 +1,263 @@
+@import "./style.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* background-color: lightpink; */
+
+    @include responsive(pc-screens) {
+        width: 1400px;
+        padding: 0 10px;
+    }
+}
+
+header { 
+    .bg-flex {
+        position: relative;
+        .bg-img {
+            @include out_container();
+            height: 200px;
+
+            @include responsive(tablet-screens) {
+                @include in_container();
+                height: 300px;
+            }
+    
+            @include responsive(pc-screens) {
+                height: 400px;
+
+            }
+            
+            img{
+                width: 100%;
+                height: 200px;
+    
+                @include responsive(tablet-screens) {
+                    height: 300px;
+                }
+    
+                @include responsive(pc-screens) {
+                    height: 400px;
+                }
+            }
+        }
+    
+        /* .flex-box {
+            .logo {
+                position: absolute;
+                top: 0;
+            }
+        } */
+        .flex-box {
+            /* position: relative; */
+            justify-content: space-between;
+            width: 100%;
+            // height: 63px;
+    
+            .logo {
+                position: absolute;
+                top: 10px;
+    
+                @include responsive(tablet-screens) {
+                    left: 10px;
+                }
+    
+                img {
+                    width: 30px;
+    
+                    @include responsive(tablet-screens) {
+                        width: 40px;
+                    }
+                }
+    
+            } // .logo
+    
+            .mobile-menu {
+                position: absolute;
+                /* right: 10px; top: 50%;
+                transform: translateY(-50%); */
+                top: 10px;
+                right: 0;
+                cursor: pointer;
+                // background-color: aqua;
+                
+                @include responsive(tablet-screens) {
+                    display: none;
+                } 
+                
+                span {
+                    display: block;
+                    width: 30px;
+                    height: 1px;
+                    background-color: $title-color;
+        
+                    &:nth-child(2) {
+                        margin: 7px 0;
+                    }
+                }
+                
+            } //.mobile-menu 
+        
+    
+            // .span-overlay {
+            //     display: none;
+            //     position: absolute;
+            //     /* left: 0; top: 63px; */
+            //     width: 100%;
+            //     z-index: 1;
+            //     background-color: $title-color;
+                
+            //     ul {
+            //         li {
+            //             border-bottom: 1px solid darken($title-color, 10);
+            //             padding: 15px;
+            //             a {
+            //                 font-size: calc(0.2em + 10px);
+            //                 color: #fff;
+    
+            //                 &:hover {
+            //                     font-weight: bold;
+            //                 }
+            //             }
+            //         }
+            //     }
+            // }
+            /* .style-block {
+                display: block;
+            } */
+    
+            nav {
+                display: none;
+                //position: absolute;
+                /* top: 50%;
+                transform: translateY(-50%); */
+    
+                @include responsive(tablet-screens) {
+                    display: block;
+                    text-align: center;
+                }
+    
+                @include responsive(pc-screens) {
+                    right: 41px;
+                }
+                
+                .gnb {
+                    text-align:center;
+                    li {
+                        padding: 0 20px;
+                        display: inline-block;
+                        margin-top: 10px;
+                        // font-size: 20px;
+                        
+                        @include responsive(pc-screens) {
+                            padding: 0 40px;
+                            font-size: 24px;
+                        }
+                        a {
+                            color: $title-color;
+                            @include gothic_font(medium, 20px);
+                        }
+                    }
+    
+                }
+            }
+    
+            .important-text {
+                position: absolute;
+                top: 80px;
+                left: 20px;
+                @include gothic_font(medium, 20px);
+                color: $title-color;
+    
+                @include responsive(tablet-screens) {
+                    left: 50px;
+                    top: 120px;
+                    font-size: 32px;
+                }
+    
+                @include responsive(pc-screens) {
+                    left: 100px;
+                    top: 140px;
+                    font-size: 36px;
+                }
+    
+                span {
+                    @include gothic_font(bold, 24px);
+                    
+                    @include responsive(tablet-screens) {
+                        font-size: 30px;
+                    }
+                    
+                    @include responsive(pc-screens) {
+                        // @include gothic_font(405px);
+                        font-size: 36px;
+
+                    }
+                }
+            }
+    
+        }
+    }
+}
+
+main {
+    section.About-me {
+        h1 {
+            color: $title-color;
+            text-decoration: underline;
+            text-decoration-thickness: 4px;
+            margin-top: 60px;
+            // width: 30px;
+        }
+
+        .flex {
+            position: relative;
+            @include responsive(tablet-screens) {
+                display: flex;
+            }
+
+            .my-img {
+
+            }
+
+            .arrow {
+                display: flex;
+                position: absolute;
+                right: 0;
+                // top: -30px;
+
+                a:first-child {
+                    margin-right: 5px;
+                }
+            }
+
+            .text {
+                margin-top: 30px;
+            }
+
+           /*  .arrow-text {
+                position: relative;
+                .arrow {
+                    display: flex;
+                    position: absolute;
+                    right: 0;
+                    top: -30px;
+
+                    a:first-child {
+                        margin-right: 5px;
+                    }
+                }
+
+                .text {
+                    margin-top: 30px;
+                }
+            } */
+        }
+    }
+}
+
+
+
