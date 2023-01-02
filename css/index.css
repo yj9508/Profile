@@ -1,1 +1,262 @@
-/*# sourceMappingURL=index.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Pretendard JP Variable", "Pretendard JP", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Apple SD Gothic Neo", Meiryo, "Noto Sans JP", "Noto Sans KR", "Malgun Gothic", Osaka, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  background-color: #fcf4e4;
+}
+
+/* .container {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 10px;
+} */
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 0;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+p {
+  font-size: 0.8em;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 20px;
+  /* background-color: lightpink; */
+}
+@media screen and (min-width: 1400px) {
+  .container {
+    width: 1400px;
+    padding: 0 10px;
+  }
+}
+
+header .bg-flex {
+  position: relative;
+  /* .flex-box {
+      .logo {
+          position: absolute;
+          top: 0;
+      }
+  } */
+}
+header .bg-flex .bg-img {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  height: 200px;
+}
+@media screen and (min-width: 768px) {
+  header .bg-flex .bg-img {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  header .bg-flex .bg-img {
+    height: 400px;
+  }
+}
+header .bg-flex .bg-img img {
+  width: 100%;
+  height: 200px;
+}
+@media screen and (min-width: 768px) {
+  header .bg-flex .bg-img img {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  header .bg-flex .bg-img img {
+    height: 400px;
+  }
+}
+header .bg-flex .flex-box {
+  /* position: relative; */
+  justify-content: space-between;
+  width: 100%;
+  /* .style-block {
+      display: block;
+  } */
+}
+header .bg-flex .flex-box .logo {
+  position: absolute;
+  top: 10px;
+}
+@media screen and (min-width: 768px) {
+  header .bg-flex .flex-box .logo {
+    left: 10px;
+  }
+}
+header .bg-flex .flex-box .logo img {
+  width: 30px;
+}
+@media screen and (min-width: 768px) {
+  header .bg-flex .flex-box .logo img {
+    width: 40px;
+  }
+}
+header .bg-flex .flex-box .mobile-menu {
+  position: absolute;
+  /* right: 10px; top: 50%;
+  transform: translateY(-50%); */
+  top: 10px;
+  right: 0;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  header .bg-flex .flex-box .mobile-menu {
+    display: none;
+  }
+}
+header .bg-flex .flex-box .mobile-menu span {
+  display: block;
+  width: 30px;
+  height: 1px;
+  background-color: #ff7473;
+}
+header .bg-flex .flex-box .mobile-menu span:nth-child(2) {
+  margin: 7px 0;
+}
+header .bg-flex .flex-box nav {
+  display: none;
+  /* top: 50%;
+  transform: translateY(-50%); */
+}
+@media screen and (min-width: 768px) {
+  header .bg-flex .flex-box nav {
+    display: block;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1400px) {
+  header .bg-flex .flex-box nav {
+    right: 41px;
+  }
+}
+header .bg-flex .flex-box nav .gnb {
+  text-align: center;
+}
+header .bg-flex .flex-box nav .gnb li {
+  padding: 0 20px;
+  display: inline-block;
+  margin-top: 10px;
+}
+@media screen and (min-width: 1400px) {
+  header .bg-flex .flex-box nav .gnb li {
+    padding: 0 40px;
+    font-size: 24px;
+  }
+}
+header .bg-flex .flex-box nav .gnb li a {
+  color: #ff7473;
+  font-size: 20px;
+  font-weight: 500;
+}
+header .bg-flex .flex-box .important-text {
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ff7473;
+}
+@media screen and (min-width: 768px) {
+  header .bg-flex .flex-box .important-text {
+    left: 50px;
+    top: 120px;
+    font-size: 32px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  header .bg-flex .flex-box .important-text {
+    left: 100px;
+    top: 140px;
+    font-size: 36px;
+  }
+}
+header .bg-flex .flex-box .important-text span {
+  font-size: 24px;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  header .bg-flex .flex-box .important-text span {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  header .bg-flex .flex-box .important-text span {
+    font-size: 36px;
+  }
+}
+
+main section.About-me h1 {
+  color: #ff7473;
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  margin-top: 60px;
+}
+main section.About-me .flex {
+  position: relative;
+  /*  .arrow-text {
+       position: relative;
+       .arrow {
+           display: flex;
+           position: absolute;
+           right: 0;
+           top: -30px;
+
+           a:first-child {
+               margin-right: 5px;
+           }
+       }
+
+       .text {
+           margin-top: 30px;
+       }
+   } */
+}
+@media screen and (min-width: 768px) {
+  main section.About-me .flex {
+    display: flex;
+  }
+}
+main section.About-me .flex .arrow {
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+main section.About-me .flex .arrow a:first-child {
+  margin-right: 5px;
+}
+main section.About-me .flex .text {
+  margin-top: 30px;
+}/*# sourceMappingURL=index.css.map */
