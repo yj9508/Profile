@@ -214,37 +214,53 @@ main {
         }
 
         .flex {
-            position: relative;
+            // position: relative;
+            // @include responsive
+
             @include responsive(tablet-screens) {
                 display: flex;
+                // justify-content: space-between;
+                margin: 0 auto;
+                width: 81.01449275362319%;
+                margin-top: 50px;
+            }
+
+            @include responsive(pc-screens) {
+                display: flex;
+                margin: 0 auto;
+                width: 71.01449275362319%;
+                margin-top: 50px;
             }
 
             .my-img {
+                text-align: center;
+                margin-top: 30px;
+                img {
+                        width: 230px;
+                        height: 310px;
+                    @include responsive(tablet-screens) {
+                        width: 250px;
+                        height: 350px;
+                    }
 
-            }
-
-            .arrow {
-                display: flex;
-                position: absolute;
-                right: 0;
-                // top: -30px;
-
-                a:first-child {
-                    margin-right: 5px;
+                    @include responsive(pc-screens) {
+                        width: 300px;
+                        height: 400px;
+                    }
                 }
             }
 
-            .text {
-                margin-top: 30px;
-            }
-
-           /*  .arrow-text {
+            .arrow-text {
                 position: relative;
                 .arrow {
                     display: flex;
                     position: absolute;
                     right: 0;
                     top: -30px;
+
+                    @include responsive(tablet-screens) {
+                        top: 0;
+                    }
 
                     a:first-child {
                         margin-right: 5px;
@@ -253,9 +269,116 @@ main {
 
                 .text {
                     margin-top: 30px;
+
+                    @include responsive(tablet-screens) {
+                        margin-left: auto;
+                        width: 85%;
+                    }
+
+                    @include responsive(pc-screens) {
+                        width: 80%;
+                    }
+                    
+                    p {
+                        @include gothic_font(regular, 14px);
+                        line-height: 40px;
+                        color: $center-color;
+                        text-align: justify;
+                        
+                        @include responsive(tablet-screens) {
+                            // margin-left: 60px;
+                            font-size: 16px;
+                        }
+                        
+                        @include responsive(pc-screens) {
+                            // margin-left: 120px;
+                            font-size: 18px;
+                        }
+                    }
                 }
-            } */
+            }
         }
+    }
+
+    section.Skills {
+        h1 {
+            color: $title-color;
+            text-decoration: underline;
+            text-decoration-thickness: 4px;
+            margin-top: 60px;
+            // width: 30px;
+        }
+
+        .flex {
+            @include responsive(tablet-screens) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 30px;
+                flex-wrap: wrap;
+            }
+
+            .left {
+                .skill-percent {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 30px;
+                    
+                    @include responsive(tablet-screens) {
+                        display: flex;
+                        flex-wrap: wrap;
+                        width: 100%;
+
+                    }
+                    .out {
+                        width: 65.71428571428571%;
+                        height: 24px;
+                        border: 2px solid $title-color;
+
+                        @include responsive(tablet-screens) {
+                            width: 42.02898550724638%;
+                        }
+                    }
+                    
+                    .percent90 {
+                        width: 90%;
+                        margin-top: 0px;
+                        height: 20px;
+                        border: 0;
+                        background-color: $title-color;
+
+                        @include responsive(tablet-screens) {
+                        
+                        }
+                    }
+                } 
+            }
+
+            .right {
+                .skill-percent {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 30px;
+                    flex-wrap: wrap;
+                    .out {
+                        width: 65.71428571428571%;
+                        height: 24px;
+                        border: 2px solid $title-color;
+                    }
+                    
+                    .percent90 {
+                        width: 90%;
+                        margin-top: 0px;
+                        height: 20px;
+                        border: 0;
+                        background-color: $title-color;
+                    }
+                } 
+            }
+        }
+
     }
 }
 

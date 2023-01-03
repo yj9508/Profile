@@ -224,39 +224,151 @@ main section.About-me h1 {
   text-decoration-thickness: 4px;
   margin-top: 60px;
 }
-main section.About-me .flex {
-  position: relative;
-  /*  .arrow-text {
-       position: relative;
-       .arrow {
-           display: flex;
-           position: absolute;
-           right: 0;
-           top: -30px;
-
-           a:first-child {
-               margin-right: 5px;
-           }
-       }
-
-       .text {
-           margin-top: 30px;
-       }
-   } */
-}
 @media screen and (min-width: 768px) {
   main section.About-me .flex {
     display: flex;
+    margin: 0 auto;
+    width: 81.0144927536%;
+    margin-top: 50px;
   }
 }
-main section.About-me .flex .arrow {
+@media screen and (min-width: 1400px) {
+  main section.About-me .flex {
+    display: flex;
+    margin: 0 auto;
+    width: 71.0144927536%;
+    margin-top: 50px;
+  }
+}
+main section.About-me .flex .my-img {
+  text-align: center;
+  margin-top: 30px;
+}
+main section.About-me .flex .my-img img {
+  width: 230px;
+  height: 310px;
+}
+@media screen and (min-width: 768px) {
+  main section.About-me .flex .my-img img {
+    width: 250px;
+    height: 350px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main section.About-me .flex .my-img img {
+    width: 300px;
+    height: 400px;
+  }
+}
+main section.About-me .flex .arrow-text {
+  position: relative;
+}
+main section.About-me .flex .arrow-text .arrow {
   display: flex;
   position: absolute;
   right: 0;
+  top: -30px;
 }
-main section.About-me .flex .arrow a:first-child {
+@media screen and (min-width: 768px) {
+  main section.About-me .flex .arrow-text .arrow {
+    top: 0;
+  }
+}
+main section.About-me .flex .arrow-text .arrow a:first-child {
   margin-right: 5px;
 }
-main section.About-me .flex .text {
+main section.About-me .flex .arrow-text .text {
   margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  main section.About-me .flex .arrow-text .text {
+    margin-left: auto;
+    width: 85%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main section.About-me .flex .arrow-text .text {
+    width: 80%;
+  }
+}
+main section.About-me .flex .arrow-text .text p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 40px;
+  color: #34314c;
+  text-align: justify;
+}
+@media screen and (min-width: 768px) {
+  main section.About-me .flex .arrow-text .text p {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main section.About-me .flex .arrow-text .text p {
+    font-size: 18px;
+  }
+}
+main section.Skills h1 {
+  color: #ff7473;
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  margin-top: 60px;
+}
+@media screen and (min-width: 768px) {
+  main section.Skills .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+}
+main section.Skills .flex .left .skill-percent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  main section.Skills .flex .left .skill-percent {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+main section.Skills .flex .left .skill-percent .out {
+  width: 65.7142857143%;
+  height: 24px;
+  border: 2px solid #ff7473;
+}
+@media screen and (min-width: 768px) {
+  main section.Skills .flex .left .skill-percent .out {
+    width: 42.0289855072%;
+  }
+}
+main section.Skills .flex .left .skill-percent .percent90 {
+  width: 90%;
+  margin-top: 0px;
+  height: 20px;
+  border: 0;
+  background-color: #ff7473;
+}
+main section.Skills .flex .right .skill-percent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+main section.Skills .flex .right .skill-percent .out {
+  width: 65.7142857143%;
+  height: 24px;
+  border: 2px solid #ff7473;
+}
+main section.Skills .flex .right .skill-percent .percent90 {
+  width: 90%;
+  margin-top: 0px;
+  height: 20px;
+  border: 0;
+  background-color: #ff7473;
 }/*# sourceMappingURL=index.css.map */
