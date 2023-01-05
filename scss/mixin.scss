@@ -26,8 +26,6 @@
     margin-right: -50vw;
 }
 
-
-// 탈그리드 해제
 @mixin in_container() {
     position: static;
     left: 0; right: 0;
@@ -35,8 +33,6 @@
     margin: 0;
 }
 
-
-// 수평(일정간격) 정렬
 @mixin flex_between() {
     display: flex;
     justify-content: space-between;

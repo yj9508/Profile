@@ -315,7 +315,12 @@ main section.Skills h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main section.Skills .flex {
+    margin-top: 60px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -383,13 +388,30 @@ main section.Portfolio .multi .text {
   margin-top: 30px;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  main section.Portfolio .multi .text {
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main section.Portfolio .multi .text {
+    margin-top: 60px;
+  }
+}
 main section.Portfolio .multi .text span:first-child {
   border: 4px solid #ff7473;
   padding: 5px;
   color: #ff7473;
 }
+main section.Portfolio .multi .img-slide {
+  background-color: #34314c;
+  height: 200px;
+  overflow: hidden;
+}
 main section.Portfolio .multi .img-slide img {
-  width: 330px;
+  width: 100%;
+  padding: 20px;
+  vertical-align: bottom;
 }
 main section.contents h1 {
   color: #ff7473;
@@ -405,4 +427,89 @@ main section.contents .contact-home {
 }
 main section.contents .contact-home li {
   margin: 0 auto;
+}
+main section.contents form div.mail-form {
+  margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  main section.contents form div.mail-form {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) {
+  main section.contents form div.mail-form .left {
+    width: 49.2753623188%;
+  }
+}
+main section.contents form div.mail-form .left .configuration .write input {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #34314c;
+  padding: 5px;
+  color: #34314c;
+}
+main section.contents form div.mail-form .left .configuration .write input::-moz-placeholder {
+  color: #34314c;
+}
+main section.contents form div.mail-form .left .configuration .write input:-ms-input-placeholder {
+  color: #34314c;
+}
+main section.contents form div.mail-form .left .configuration .write input::placeholder {
+  color: #34314c;
+}
+@media screen and (min-width: 768px) {
+  main section.contents form div.mail-form .left .configuration .write input {
+    padding: 7px;
+  }
+}
+@media screen and (min-width: 768px) {
+  main section.contents form div.mail-form .right {
+    width: 49.2753623188%;
+  }
+}
+main section.contents form div.mail-form .right .write textarea {
+  margin-top: 10px;
+  width: 100%;
+  border: 1px solid #34314c;
+  padding: 5px;
+  color: #34314c;
+}
+main section.contents form div.mail-form .right .write textarea::-moz-placeholder {
+  color: #34314c;
+}
+main section.contents form div.mail-form .right .write textarea:-ms-input-placeholder {
+  color: #34314c;
+}
+main section.contents form div.mail-form .right .write textarea::placeholder {
+  color: #34314c;
+}
+@media screen and (min-width: 768px) {
+  main section.contents form div.mail-form .right .write textarea {
+    padding: 7px;
+    height: 191px;
+  }
+}
+main section.contents form .btn-wrap {
+  text-align: center;
+}
+main section.contents form .btn-wrap .btn {
+  margin-top: 30px;
+  border: 1px solid #34314c;
+  background-color: transparent;
+  color: #34314c;
+  padding: 5px 20px;
+}
+
+footer .image {
+  text-align: center;
+}
+footer .image img {
+  margin-top: 30px;
+}
+@media screen and (min-width: 1400px) {
+  footer .image img {
+    margin-top: 60px;
+  }
 }/*# sourceMappingURL=index.css.map */
