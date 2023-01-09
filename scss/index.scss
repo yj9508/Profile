@@ -258,55 +258,113 @@ main {
                 }
             }
 
-            .arrow-text {
+            /* .none {
+                display: none;
+            } */
+            .slideshow-container {
                 position: relative;
                 .arrow {
+                    cursor: pointer;
                     display: flex;
                     position: absolute;
                     right: 0;
                     top: -30px;
-
+    
                     @include responsive(tablet-screens) {
                         top: 0;
                     }
-
+    
                     a:first-child {
                         margin-right: 5px;
                     }
                 }
-
-                .text {
-                    margin-top: 30px;
-
-                    @include responsive(tablet-screens) {
-                        margin-left: auto;
-                        width: 85%;
-                    }
-
-                    @include responsive(pc-screens) {
-                        width: 80%;
-                    }
-                    
-                    p {
-                        @include gothic_font(regular, 14px);
-                        line-height: 40px;
-                        color: $center-color;
-                        text-align: justify;
-                        
+                .mySlides {
+                    .text {
+                        margin-top: 30px;
+        
                         @include responsive(tablet-screens) {
-                            // margin-left: 60px;
-                            font-size: 16px;
+                            margin-left: auto;
+                            width: 85%;
+                        }
+        
+                        @include responsive(pc-screens) {
+                            width: 80%;
                         }
                         
-                        @include responsive(pc-screens) {
-                            // margin-left: 120px;
-                            font-size: 18px;
+                        p {
+                            @include gothic_font(regular, 14px);
+                            line-height: 40px;
+                            color: $center-color;
+                            text-align: justify;
+                            
+                            @include responsive(tablet-screens) {
+                                // margin-left: 60px;
+                                font-size: 16px;
+                            }
+                            
+                            @include responsive(pc-screens) {
+                                // margin-left: 120px;
+                                font-size: 18px;
+                            }
                         }
                     }
                 }
+                
             }
+            
         }
     }
+    /* section {
+        .arrow-text {
+            position: relative;
+            .arrow {
+                cursor: pointer;
+                display: flex;
+                position: absolute;
+                right: 0;
+                top: -30px;
+
+                @include responsive(tablet-screens) {
+                    top: 0;
+                }
+
+                a:first-child {
+                    margin-right: 5px;
+                }
+            }
+
+            .text {
+                margin-top: 30px;
+
+                @include responsive(tablet-screens) {
+                    margin-left: auto;
+                    width: 85%;
+                }
+
+                @include responsive(pc-screens) {
+                    width: 80%;
+                }
+                
+                p {
+                    @include gothic_font(regular, 14px);
+                    line-height: 40px;
+                    color: $center-color;
+                    text-align: justify;
+                    
+                    @include responsive(tablet-screens) {
+                        // margin-left: 60px;
+                        font-size: 16px;
+                    }
+                    
+                    @include responsive(pc-screens) {
+                        // margin-left: 120px;
+                        font-size: 18px;
+                    }
+                }
+            }
+            
+        }
+    } */
 
     section.Skills {
         h1 {

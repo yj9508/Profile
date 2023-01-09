@@ -215,6 +215,59 @@ header .bg-flex .flex-box .important-text span {
   }
 }
 
+main {
+  /* section {
+      .arrow-text {
+          position: relative;
+          .arrow {
+              cursor: pointer;
+              display: flex;
+              position: absolute;
+              right: 0;
+              top: -30px;
+
+              @include responsive(tablet-screens) {
+                  top: 0;
+              }
+
+              a:first-child {
+                  margin-right: 5px;
+              }
+          }
+
+          .text {
+              margin-top: 30px;
+
+              @include responsive(tablet-screens) {
+                  margin-left: auto;
+                  width: 85%;
+              }
+
+              @include responsive(pc-screens) {
+                  width: 80%;
+              }
+
+              p {
+                  @include gothic_font(regular, 14px);
+                  line-height: 40px;
+                  color: $center-color;
+                  text-align: justify;
+
+                  @include responsive(tablet-screens) {
+                      // margin-left: 60px;
+                      font-size: 16px;
+                  }
+
+                  @include responsive(pc-screens) {
+                      // margin-left: 120px;
+                      font-size: 18px;
+                  }
+              }
+          }
+
+      }
+  } */
+}
 main section.About-me h1 {
   color: #ff7473;
   text-decoration: underline;
@@ -230,6 +283,11 @@ main section.About-me h1 {
   main section.About-me h1 {
     font-size: 2em;
   }
+}
+main section.About-me .flex {
+  /* .none {
+      display: none;
+  } */
 }
 @media screen and (min-width: 768px) {
   main section.About-me .flex {
@@ -267,38 +325,39 @@ main section.About-me .flex .my-img img {
     height: 400px;
   }
 }
-main section.About-me .flex .arrow-text {
+main section.About-me .flex .slideshow-container {
   position: relative;
 }
-main section.About-me .flex .arrow-text .arrow {
+main section.About-me .flex .slideshow-container .arrow {
+  cursor: pointer;
   display: flex;
   position: absolute;
   right: 0;
   top: -30px;
 }
 @media screen and (min-width: 768px) {
-  main section.About-me .flex .arrow-text .arrow {
+  main section.About-me .flex .slideshow-container .arrow {
     top: 0;
   }
 }
-main section.About-me .flex .arrow-text .arrow a:first-child {
+main section.About-me .flex .slideshow-container .arrow a:first-child {
   margin-right: 5px;
 }
-main section.About-me .flex .arrow-text .text {
+main section.About-me .flex .slideshow-container .mySlides .text {
   margin-top: 30px;
 }
 @media screen and (min-width: 768px) {
-  main section.About-me .flex .arrow-text .text {
+  main section.About-me .flex .slideshow-container .mySlides .text {
     margin-left: auto;
     width: 85%;
   }
 }
 @media screen and (min-width: 1380px) {
-  main section.About-me .flex .arrow-text .text {
+  main section.About-me .flex .slideshow-container .mySlides .text {
     width: 80%;
   }
 }
-main section.About-me .flex .arrow-text .text p {
+main section.About-me .flex .slideshow-container .mySlides .text p {
   font-size: 14px;
   font-weight: 400;
   line-height: 40px;
@@ -306,12 +365,12 @@ main section.About-me .flex .arrow-text .text p {
   text-align: justify;
 }
 @media screen and (min-width: 768px) {
-  main section.About-me .flex .arrow-text .text p {
+  main section.About-me .flex .slideshow-container .mySlides .text p {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 1380px) {
-  main section.About-me .flex .arrow-text .text p {
+  main section.About-me .flex .slideshow-container .mySlides .text p {
     font-size: 18px;
   }
 }
