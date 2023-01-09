@@ -44,8 +44,11 @@ p {
   margin: 0 auto;
   padding: 0 20px;
   /* background-color: lightpink; */
+  /*  @include responsive(tablet-screens) {
+       width: 768px;
+   } */
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1380px) {
   .container {
     width: 1400px;
     padding: 0 10px;
@@ -74,7 +77,7 @@ header .bg-flex .bg-img {
     height: 300px;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1380px) {
   header .bg-flex .bg-img {
     height: 400px;
   }
@@ -88,7 +91,7 @@ header .bg-flex .bg-img img {
     height: 300px;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1380px) {
   header .bg-flex .bg-img img {
     height: 400px;
   }
@@ -151,7 +154,7 @@ header .bg-flex .flex-box nav {
     text-align: center;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1380px) {
   header .bg-flex .flex-box nav {
     right: 41px;
   }
@@ -164,7 +167,7 @@ header .bg-flex .flex-box nav .gnb li {
   display: inline-block;
   margin-top: 10px;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1380px) {
   header .bg-flex .flex-box nav .gnb li {
     padding: 0 40px;
     font-size: 24px;
@@ -190,7 +193,7 @@ header .bg-flex .flex-box .important-text {
     font-size: 32px;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1380px) {
   header .bg-flex .flex-box .important-text {
     left: 100px;
     top: 140px;
@@ -206,7 +209,7 @@ header .bg-flex .flex-box .important-text span {
     font-size: 30px;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1380px) {
   header .bg-flex .flex-box .important-text span {
     font-size: 36px;
   }
@@ -219,6 +222,16 @@ main section.About-me h1 {
   margin-top: 60px;
 }
 @media screen and (min-width: 768px) {
+  main section.About-me h1 {
+    font-size: 1.6em;
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.About-me h1 {
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 768px) {
   main section.About-me .flex {
     display: flex;
     margin: 0 auto;
@@ -226,7 +239,7 @@ main section.About-me h1 {
     margin-top: 50px;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1380px) {
   main section.About-me .flex {
     display: flex;
     width: 71.0144927536%;
@@ -248,7 +261,7 @@ main section.About-me .flex .my-img img {
     height: 350px;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1380px) {
   main section.About-me .flex .my-img img {
     width: 300px;
     height: 400px;
@@ -280,7 +293,7 @@ main section.About-me .flex .arrow-text .text {
     width: 85%;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1380px) {
   main section.About-me .flex .arrow-text .text {
     width: 80%;
   }
@@ -297,7 +310,7 @@ main section.About-me .flex .arrow-text .text p {
     font-size: 16px;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1380px) {
   main section.About-me .flex .arrow-text .text p {
     font-size: 18px;
   }
@@ -307,8 +320,16 @@ main section.Skills h1 {
   text-decoration: underline;
   text-decoration-thickness: 4px;
   margin-top: 60px;
-  font-size: 20px;
-  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  main section.Skills h1 {
+    font-size: 1.6em;
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.Skills h1 {
+    font-size: 2em;
+  }
 }
 @media screen and (min-width: 768px) {
   main section.Skills .flex {
@@ -318,7 +339,7 @@ main section.Skills h1 {
     margin-top: 40px;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1380px) {
   main section.Skills .flex {
     margin-top: 60px;
   }
@@ -329,7 +350,7 @@ main section.Skills .flex .right {
     width: 45%;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1380px) {
   main section.Skills .flex .left,
 main section.Skills .flex .right {
     width: 42.0289855072%;
@@ -346,10 +367,17 @@ main section.Skills .flex .right .skill-percent {
   main section.Skills .flex .left .skill-percent,
 main section.Skills .flex .right .skill-percent {
     width: 100%;
+    margin-top: 40px;
   }
   main section.Skills .flex .left .skill-percent:first-child,
 main section.Skills .flex .right .skill-percent:first-child {
     margin-top: 0;
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.Skills .flex .left .skill-percent span,
+main section.Skills .flex .right .skill-percent span {
+    font-size: 18px;
   }
 }
 main section.Skills .flex .left .skill-percent .out,
@@ -364,8 +392,8 @@ main section.Skills .flex .right .skill-percent .out {
     height: 28px;
   }
 }
-main section.Skills .flex .left .skill-percent .percent90,
-main section.Skills .flex .right .skill-percent .percent90 {
+main section.Skills .flex .left .skill-percent .out .percent90,
+main section.Skills .flex .right .skill-percent .out .percent90 {
   width: 90%;
   margin-top: 0px;
   height: 20px;
@@ -373,10 +401,13 @@ main section.Skills .flex .right .skill-percent .percent90 {
   background-color: #ff7473;
 }
 @media screen and (min-width: 768px) {
-  main section.Skills .flex .left .skill-percent .percent90,
-main section.Skills .flex .right .skill-percent .percent90 {
+  main section.Skills .flex .left .skill-percent .out .percent90,
+main section.Skills .flex .right .skill-percent .out .percent90 {
     height: 24px;
   }
+}
+main section.Portfolio {
+  position: relative;
 }
 main section.Portfolio h1 {
   margin-top: 60px;
@@ -384,42 +415,214 @@ main section.Portfolio h1 {
   text-decoration: underline;
   text-decoration-thickness: 4px;
 }
-main section.Portfolio .multi .text {
-  margin-top: 30px;
+@media screen and (min-width: 768px) {
+  main section.Portfolio h1 {
+    font-size: 1.6em;
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.Portfolio h1 {
+    font-size: 2em;
+  }
+}
+main section.Portfolio .text {
+  margin: 30px 0;
   text-align: center;
+  font-size: 16px;
+  font-weight: 500;
 }
 @media screen and (min-width: 768px) {
-  main section.Portfolio .multi .text {
+  main section.Portfolio .text {
     margin-top: 40px;
   }
 }
-@media screen and (min-width: 1400px) {
-  main section.Portfolio .multi .text {
+@media screen and (min-width: 1380px) {
+  main section.Portfolio .text {
     margin-top: 60px;
   }
 }
-main section.Portfolio .multi .text span:first-child {
+main section.Portfolio .text span:first-child {
   border: 4px solid #ff7473;
-  padding: 5px;
+  padding: 5px 10px;
   color: #ff7473;
+  font-size: 20px;
+  margin-right: 5px;
 }
-main section.Portfolio .multi .img-slide {
+@media screen and (min-width: 768px) {
+  main section.Portfolio .text span:first-child {
+    font-size: 22px;
+    margin-right: 10px;
+    padding: 5px 20px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.Portfolio .text span:first-child {
+    font-size: 28px;
+    padding: 5px 30px;
+  }
+}
+main section.Portfolio .text span:last-child {
+  font-size: 22px;
+}
+@media screen and (min-width: 768px) {
+  main section.Portfolio .text span:last-child {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.Portfolio .text span:last-child {
+    font-size: 30px;
+  }
+}
+main section.Portfolio .left-arrow {
+  position: absolute;
+  left: 1%;
+  top: 50%;
+  transform: translate(1%, 50%);
+}
+@media screen and (min-width: 768px) {
+  main section.Portfolio .left-arrow {
+    left: 0.5%;
+    transform: translate(0.5%, 50%);
+    transform: scale(1.5, 1.5);
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.Portfolio .left-arrow {
+    left: 2%;
+    transform: translate(2%, 50%);
+    transform: scale(3, 3);
+  }
+}
+main section.Portfolio .right-arrow {
+  position: absolute;
+  right: 1%;
+  top: 50%;
+  transform: translate(1%, 50%);
+}
+@media screen and (min-width: 768px) {
+  main section.Portfolio .right-arrow {
+    right: 0.5%;
+    transform: translate(0.5%, 50%);
+    transform: scale(1.5, 1.5);
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.Portfolio .right-arrow {
+    right: 2%;
+    transform: translate(2%, 50%);
+    transform: scale(3, 3);
+  }
+}
+main section.Portfolio .section3 .section3-slide-wrap {
+  position: relative;
+  height: 300px;
   background-color: #34314c;
-  height: 200px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  main section.Portfolio .section3 .section3-slide-wrap {
+    width: 100%;
+    height: 550px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.Portfolio .section3 .section3-slide-wrap {
+    width: 93%;
+    height: 700px;
+  }
+}
+main section.Portfolio .section3 .section3-slide-wrap .slide {
+  position: absolute;
+  top: 3%;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  font-size: 0;
   overflow: hidden;
 }
-main section.Portfolio .multi .img-slide img {
+@media screen and (min-width: 1380px) {
+  main section.Portfolio .section3 .section3-slide-wrap .slide {
+    width: 97%;
+  }
+}
+main section.Portfolio .section3 .section3-slide-wrap .slide.slide1:hover .slide-svt {
+  transform: translateY(calc(-100% + 252px));
+}
+@media screen and (min-width: 768px) {
+  main section.Portfolio .section3 .section3-slide-wrap .slide.slide1:hover .slide-svt {
+    transform: translateY(calc(-100% + 402px));
+  }
+}
+main section.Portfolio .section3 .section3-slide-wrap .slide.slide1 .slide-svt {
+  transition: transform 4s cubic-bezier(0, 0, 0.58, 1);
+}
+@media screen and (min-width: 768px) {
+  main section.Portfolio .section3 .section3-slide-wrap .slide.slide1 .slide-svt {
+    transition: transform 5s cubic-bezier(0, 0, 0.58, 1);
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.Portfolio .section3 .section3-slide-wrap .slide.slide1 .slide-svt {
+    transition: transform 8s cubic-bezier(0, 0, 0.58, 1);
+  }
+}
+main section.Portfolio .section3 .section3-slide-wrap .slide img {
   width: 100%;
-  padding: 20px;
-  vertical-align: bottom;
+}
+main section.Portfolio .section3 .bottom-svt {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 30px 0 30px;
+}
+@media screen and (min-width: 768px) {
+  main section.Portfolio .section3 .bottom-svt {
+    margin: 35px 100px 0 100px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.Portfolio .section3 .bottom-svt {
+    margin: 60px 300px 0 300px;
+  }
+}
+main section.Portfolio .section3 .bottom-svt span {
+  border: 2px solid #34314c;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  main section.Portfolio .section3 .bottom-svt span {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.Portfolio .section3 .bottom-svt span {
+    font-size: 24px;
+  }
+}
+main section.Portfolio .section3 .bottom-svt span:hover {
+  background-color: #ff7473;
+  border: 2px solid #ff7473;
+  color: white;
 }
 main section.contents h1 {
   color: #ff7473;
   text-decoration: underline;
   text-decoration-thickness: 4px;
   margin-top: 60px;
-  font-size: 20px;
-  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  main section.contents h1 {
+    font-size: 1.6em;
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.contents h1 {
+    font-size: 2em;
+  }
 }
 main section.contents .contact-home {
   display: flex;
@@ -427,6 +630,27 @@ main section.contents .contact-home {
 }
 main section.contents .contact-home li {
   margin: 0 auto;
+  font-size: 16px;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  main section.contents .contact-home li {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.contents .contact-home li {
+    font-size: 22px;
+  }
+}
+main section.contents .contact-home li p {
+  font-size: 16px;
+  font-weight: 500;
+}
+@media screen and (min-width: 1380px) {
+  main section.contents .contact-home li p {
+    font-size: 20px;
+  }
 }
 main section.contents form div.mail-form {
   margin-top: 30px;
@@ -452,17 +676,34 @@ main section.contents form div.mail-form .left .configuration .write input {
 }
 main section.contents form div.mail-form .left .configuration .write input::-moz-placeholder {
   color: #34314c;
+  font-size: 15px;
 }
 main section.contents form div.mail-form .left .configuration .write input:-ms-input-placeholder {
   color: #34314c;
+  font-size: 15px;
 }
 main section.contents form div.mail-form .left .configuration .write input::placeholder {
   color: #34314c;
+  font-size: 15px;
+}
+@media screen and (min-width: 1380px) {
+  main section.contents form div.mail-form .left .configuration .write input::-moz-placeholder {
+    font-size: 16px;
+  }
+  main section.contents form div.mail-form .left .configuration .write input:-ms-input-placeholder {
+    font-size: 16px;
+  }
+  main section.contents form div.mail-form .left .configuration .write input::placeholder {
+    font-size: 16px;
+  }
 }
 @media screen and (min-width: 768px) {
   main section.contents form div.mail-form .left .configuration .write input {
     padding: 7px;
   }
+}
+main section.contents form div.mail-form .left .configuration .write .title {
+  margin-bottom: 0;
 }
 @media screen and (min-width: 768px) {
   main section.contents form div.mail-form .right {
@@ -470,6 +711,7 @@ main section.contents form div.mail-form .left .configuration .write input::plac
   }
 }
 main section.contents form div.mail-form .right .write textarea {
+  vertical-align: bottom;
   margin-top: 10px;
   width: 100%;
   border: 1px solid #34314c;
@@ -478,12 +720,29 @@ main section.contents form div.mail-form .right .write textarea {
 }
 main section.contents form div.mail-form .right .write textarea::-moz-placeholder {
   color: #34314c;
+  font-size: 15px;
+  font-weight: 500;
 }
 main section.contents form div.mail-form .right .write textarea:-ms-input-placeholder {
   color: #34314c;
+  font-size: 15px;
+  font-weight: 500;
 }
 main section.contents form div.mail-form .right .write textarea::placeholder {
   color: #34314c;
+  font-size: 15px;
+  font-weight: 500;
+}
+@media screen and (min-width: 1380px) {
+  main section.contents form div.mail-form .right .write textarea::-moz-placeholder {
+    font-size: 16px;
+  }
+  main section.contents form div.mail-form .right .write textarea:-ms-input-placeholder {
+    font-size: 16px;
+  }
+  main section.contents form div.mail-form .right .write textarea::placeholder {
+    font-size: 16px;
+  }
 }
 @media screen and (min-width: 768px) {
   main section.contents form div.mail-form .right .write textarea {
@@ -500,6 +759,20 @@ main section.contents form .btn-wrap .btn {
   background-color: transparent;
   color: #34314c;
   padding: 5px 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  main section.contents form .btn-wrap .btn {
+    font-size: 18px;
+    padding: 5px 30px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.contents form .btn-wrap .btn {
+    font-size: 20px;
+    padding: 5px 35px;
+  }
 }
 
 footer .image {
@@ -507,9 +780,15 @@ footer .image {
 }
 footer .image img {
   margin-top: 30px;
+  width: 34px;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 768px) {
   footer .image img {
-    margin-top: 60px;
+    width: 40px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  footer .image img {
+    margin-top: 50px;
   }
 }/*# sourceMappingURL=index.css.map */
