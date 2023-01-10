@@ -8,7 +8,7 @@
     padding: 0 20px;
     /* background-color: lightpink; */
 
-   /*  @include responsive(tablet-screens) {
+    /* @include responsive(tablet-screens) {
         width: 768px;
     } */
 
@@ -272,6 +272,15 @@ main {
     
                     @include responsive(tablet-screens) {
                         top: 0;
+                        // left: 315px;
+                        // left: 93.627119%;
+                        // left: 3.389830508474576%;
+                        right: 0;
+
+                    }
+
+                    @include responsive(pc-screens) {
+                        left: 655px;
                     }
     
                     a:first-child {
@@ -290,9 +299,23 @@ main {
                         @include responsive(pc-screens) {
                             width: 80%;
                         }
+
+                        &.right {
+                            @include responsive(tablet-screens) {
+                                width: 85%;
+                                // margin-left: 50%;
+                                // margin-left: auto;
+                            }
+            
+                            @include responsive(pc-screens) {
+                                width: 80%;
+                                margin-left: 136px;
+                            }
+                        }
                         
                         p {
-                            @include gothic_font(regular, 14px);
+                            // @include gothic_font(regular, 14px);
+                            font-size: 14px;
                             line-height: 40px;
                             color: $center-color;
                             text-align: justify;
@@ -372,6 +395,7 @@ main {
             text-decoration: underline;
             text-decoration-thickness: 4px;
             margin-top: 60px;
+            // margin-bottom: 100px;
             // @include gothic_font(medium, 20px);
 
             @include responsive(tablet-screens) {
@@ -380,6 +404,7 @@ main {
 
             @include responsive(pc-screens) {
                 font-size: 2em;
+                margin-top: 200px;
             }
             // width: 30px;
         }
@@ -394,8 +419,16 @@ main {
             }
 
             @include responsive(pc-screens) {
-                margin-top: 60px;
+                margin-top: 100px;
             }
+
+            // .left {
+
+            // }
+
+            // .right {
+
+            // }
 
             .left,
             .right {
@@ -404,19 +437,23 @@ main {
                 }
 
                 @include responsive(pc-screens) {
-                    width: 42.02898550724638%;
+                    // width: 42.02898550724638%;
                 }
+
                 .skill-percent {
                     display: flex;
                     justify-content: space-between;
-                    align-items: center;
+                    cursor: pointer;
+                    // align-items: center;
                     margin-top: 30px;
 
                     @include responsive(tablet-screens) {
                         // flex-wrap: wrap;
                         width: 100%;
                         margin-top: 40px;
-
+                        justify-content: space-between;
+                        align-items: center;
+                        cursor:auto;
                         &:first-child {
                             margin-top: 0;
                         }
@@ -433,6 +470,8 @@ main {
                         width: 65.71428571428571%;
                         height: 24px;
                         border: 2px solid $title-color;
+                        position: relative;
+                        display: inline-block;
 
                         @include responsive(tablet-screens) {
                             // width: 42.02898550724638%;
@@ -446,15 +485,200 @@ main {
                             height: 20px;
                             border: 0;
                             background-color: $title-color;
-    
+
                             @include responsive(tablet-screens) {
-                                height: 24px;                    
+                                height: 25px;                    
+                            }
+                        }
+
+                        img {
+                            // background-color: transparent;
+                            // margin-left: 30px;
+                        }
+
+                        // .popup {
+                        //     visibility: hidden;
+                        //     @include responsive(pc-screens) {
+                        //         // margin: 0 auto;
+                        //         display: block;
+                        //         margin: 0 auto;
+                        //         // width: 120px;
+                        //         background-color: #fdc5aa;
+                        //         color: #fff;
+                        //         // text-align: center;
+                        //         // padding: 5px 0;
+                        //         // border-radius: 6px;
+                        //         border: 1px solid $center-color;
+        
+                        //         /* Position the tooltip text */
+                        //         position: absolute;
+                        //         // top: 50%;
+                        //         // left: 50%;
+                        //         // transform: translate(-50%, -23%);
+    
+                        //         // &:first-child {
+                        //             top: 0;
+                        //             left: 50%;
+                        //             transform: translate(-10%, -20%);
+                        //         // }
+                        //         z-index: 1;
+                        //         // bottom: 15%;
+                        //         // left: 50%;
+                        //         width: 780px;
+                        //         height: 400px;
+                        //         // margin-left: 60px;
+        
+                        //         /* Fade in tooltip */
+                        //         // opacity: 0;
+                        //         transition: opacity 0.3s;
+                        //         display: flex;
+                        //         // left: 500px;
+                        //     }
+    
+                        //     .logo {
+                        //     }
+    
+                            
+                        // }
+    
+                        .mobile-popup {
+                            visibility: hidden;
+                            position: relative;
+                            display: inline-block;
+                            // cursor: pointer;
+                            -webkit-user-select: none;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                            user-select: none;
+    
+                            .popuptext {
+                                visibility: hidden;
+                                width: 300px;
+                                height: 170px;
+                                background-color: #fdc5aa;
+                                color: #fff;
+                                text-align: center;
+                                border-radius: 6px;
+                                padding: 8px 0;
+                                position: absolute;
+                                z-index: 1;
+                                bottom: 125%;
+                                left: 50%;
+                                margin-left: -80px;
+
+                                .logo {
+                                    img {
+                                        width: 66px;
+                                    }
+                                }
+                                
+    
+                                /* &::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 100%;
+                                    left: 50%;
+                                    margin-left: -5px;
+                                    border-width: 5px;
+                                    border-style: solid;
+                                    border-color: #555 transparent transparent transparent;
+                                } */
+                            }
+    
+                            .show {
+                                visibility: visible;
+                                -webkit-animation: fadeIn 1s;
+                                animation: fadeIn 1s;
+    
+                                @include responsive(tablet-screens) {
+                                    visibility: hidden;
+                                }
+                            }
+    
+                            /* Add animation (fade in the popup) */
+                            @-webkit-keyframes fadeIn {
+                            from {opacity: 0;} 
+                            to {opacity: 1;}
+                            }
+                            
+                            @keyframes fadeIn {
+                            from {opacity: 0;}
+                            to {opacity:1 ;}
+                            }
+                        }
+    
+                        // .popup::after {
+                        //     content: "";
+                        //     position: absolute;
+                        //     top: 100%;
+                        //     left: 50%;
+                        //     margin-left: -5px;
+                        //     border-width: 5px;
+                        //     border-style: solid;
+                        //     border-color: #555 transparent transparent transparent;
+                        // }
+    
+                        &:hover {
+                            .popup {
+    
+                                @include responsive(pc-screens) {
+                                    visibility: visible;
+                                    opacity: 1;
+                                }
                             }
                         }
                     }
-                    
+
                 } 
             }
+
+            .left {
+                .popup {
+                    visibility: hidden;
+                    @include responsive(pc-screens) {
+                        display: block;
+                        margin: 0 auto;
+                        background-color: #fdc5aa;
+                        color: #fff;
+                        border: 1px solid $center-color;
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        transform: translate(-10%, -20%);
+                        z-index: 1;
+                        width: 780px;
+                        height: 400px;
+
+                        transition: opacity 0.3s;
+                        display: flex;
+                    }
+                }
+            }
+            
+            .right {
+                .popup {
+                    visibility: hidden;
+                    @include responsive(pc-screens) {
+                        display: block;
+                        margin: 0 auto;
+                        background-color: #fdc5aa;
+                        color: #fff;
+                        border: 1px solid $center-color;
+
+                        position: absolute;
+
+                        top: 0;
+                        right: 50%;
+                        transform: translate(-10%, -20%);
+                        z-index: 1;
+                        width: 780px;
+                        height: 400px;
+
+                        transition: opacity 0.3s;
+                        display: flex;
+                    }
+                }
+            } 
         }
     }
 
@@ -467,6 +691,7 @@ main {
             color: $title-color;
             text-decoration: underline;
             text-decoration-thickness: 4px;
+            margin-top: 60px;
             // width: 30px;
             @include responsive(tablet-screens) {
                 font-size: 1.6em;
@@ -474,6 +699,7 @@ main {
 
             @include responsive(pc-screens) {
                 font-size: 2em;
+                margin-top: 200px;
             }
         }
 
@@ -487,7 +713,7 @@ main {
             }
 
             @include responsive(pc-screens) {
-                margin-top: 60px;
+                margin-top: 100px;
             }
 
             span:first-child {
@@ -679,6 +905,7 @@ main {
             text-decoration: underline;
             text-decoration-thickness: 4px;
             margin-top: 60px;
+
             // @include gothic_font(medium, 20px);
             // width: 30px;
             @include responsive(tablet-screens) {
@@ -687,12 +914,17 @@ main {
 
             @include responsive(pc-screens) {
                 font-size: 2em;
+                margin-top: 200px;
             }
         }
 
         .contact-home {
             display: flex;
             margin-top: 30px;
+
+            @include responsive(pc-screens) {
+                margin-top: 100px;
+            }
             
             li {
                 margin: 0 auto;
@@ -758,7 +990,10 @@ main {
                             }
 
                             .title {
-                                margin-bottom: 0;
+
+                                @include responsive(tablet-screens) {
+                                    margin-bottom: 0;
+                                }
                             }
                         }
                     }

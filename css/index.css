@@ -44,9 +44,9 @@ p {
   margin: 0 auto;
   padding: 0 20px;
   /* background-color: lightpink; */
-  /*  @include responsive(tablet-screens) {
-       width: 768px;
-   } */
+  /* @include responsive(tablet-screens) {
+      width: 768px;
+  } */
 }
 @media screen and (min-width: 1380px) {
   .container {
@@ -338,6 +338,12 @@ main section.About-me .flex .slideshow-container .arrow {
 @media screen and (min-width: 768px) {
   main section.About-me .flex .slideshow-container .arrow {
     top: 0;
+    right: 0;
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.About-me .flex .slideshow-container .arrow {
+    left: 655px;
   }
 }
 main section.About-me .flex .slideshow-container .arrow a:first-child {
@@ -357,9 +363,19 @@ main section.About-me .flex .slideshow-container .mySlides .text {
     width: 80%;
   }
 }
+@media screen and (min-width: 768px) {
+  main section.About-me .flex .slideshow-container .mySlides .text.right {
+    width: 85%;
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.About-me .flex .slideshow-container .mySlides .text.right {
+    width: 80%;
+    margin-left: 136px;
+  }
+}
 main section.About-me .flex .slideshow-container .mySlides .text p {
   font-size: 14px;
-  font-weight: 400;
   line-height: 40px;
   color: #34314c;
   text-align: justify;
@@ -388,6 +404,7 @@ main section.Skills h1 {
 @media screen and (min-width: 1380px) {
   main section.Skills h1 {
     font-size: 2em;
+    margin-top: 200px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -400,7 +417,7 @@ main section.Skills h1 {
 }
 @media screen and (min-width: 1380px) {
   main section.Skills .flex {
-    margin-top: 60px;
+    margin-top: 100px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -409,17 +426,11 @@ main section.Skills .flex .right {
     width: 45%;
   }
 }
-@media screen and (min-width: 1380px) {
-  main section.Skills .flex .left,
-main section.Skills .flex .right {
-    width: 42.0289855072%;
-  }
-}
 main section.Skills .flex .left .skill-percent,
 main section.Skills .flex .right .skill-percent {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  cursor: pointer;
   margin-top: 30px;
 }
 @media screen and (min-width: 768px) {
@@ -427,6 +438,9 @@ main section.Skills .flex .right .skill-percent {
 main section.Skills .flex .right .skill-percent {
     width: 100%;
     margin-top: 40px;
+    justify-content: space-between;
+    align-items: center;
+    cursor: auto;
   }
   main section.Skills .flex .left .skill-percent:first-child,
 main section.Skills .flex .right .skill-percent:first-child {
@@ -444,6 +458,8 @@ main section.Skills .flex .right .skill-percent .out {
   width: 65.7142857143%;
   height: 24px;
   border: 2px solid #ff7473;
+  position: relative;
+  display: inline-block;
 }
 @media screen and (min-width: 768px) {
   main section.Skills .flex .left .skill-percent .out,
@@ -462,7 +478,125 @@ main section.Skills .flex .right .skill-percent .out .percent90 {
 @media screen and (min-width: 768px) {
   main section.Skills .flex .left .skill-percent .out .percent90,
 main section.Skills .flex .right .skill-percent .out .percent90 {
-    height: 24px;
+    height: 25px;
+  }
+}
+main section.Skills .flex .left .skill-percent .out .mobile-popup,
+main section.Skills .flex .right .skill-percent .out .mobile-popup {
+  visibility: hidden;
+  position: relative;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Add animation (fade in the popup) */
+}
+main section.Skills .flex .left .skill-percent .out .mobile-popup .popuptext,
+main section.Skills .flex .right .skill-percent .out .mobile-popup .popuptext {
+  visibility: hidden;
+  width: 300px;
+  height: 170px;
+  background-color: #fdc5aa;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+  /* &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+  } */
+}
+main section.Skills .flex .left .skill-percent .out .mobile-popup .popuptext .logo img,
+main section.Skills .flex .right .skill-percent .out .mobile-popup .popuptext .logo img {
+  width: 66px;
+}
+main section.Skills .flex .left .skill-percent .out .mobile-popup .show,
+main section.Skills .flex .right .skill-percent .out .mobile-popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+@media screen and (min-width: 768px) {
+  main section.Skills .flex .left .skill-percent .out .mobile-popup .show,
+main section.Skills .flex .right .skill-percent .out .mobile-popup .show {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.Skills .flex .left .skill-percent .out:hover .popup,
+main section.Skills .flex .right .skill-percent .out:hover .popup {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+main section.Skills .flex .left .popup {
+  visibility: hidden;
+}
+@media screen and (min-width: 1380px) {
+  main section.Skills .flex .left .popup {
+    display: block;
+    margin: 0 auto;
+    background-color: #fdc5aa;
+    color: #fff;
+    border: 1px solid #34314c;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-10%, -20%);
+    z-index: 1;
+    width: 780px;
+    height: 400px;
+    transition: opacity 0.3s;
+    display: flex;
+  }
+}
+main section.Skills .flex .right .popup {
+  visibility: hidden;
+}
+@media screen and (min-width: 1380px) {
+  main section.Skills .flex .right .popup {
+    display: block;
+    margin: 0 auto;
+    background-color: #fdc5aa;
+    color: #fff;
+    border: 1px solid #34314c;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translate(-10%, -20%);
+    z-index: 1;
+    width: 780px;
+    height: 400px;
+    transition: opacity 0.3s;
+    display: flex;
   }
 }
 main section.Portfolio {
@@ -473,6 +607,7 @@ main section.Portfolio h1 {
   color: #ff7473;
   text-decoration: underline;
   text-decoration-thickness: 4px;
+  margin-top: 60px;
 }
 @media screen and (min-width: 768px) {
   main section.Portfolio h1 {
@@ -482,6 +617,7 @@ main section.Portfolio h1 {
 @media screen and (min-width: 1380px) {
   main section.Portfolio h1 {
     font-size: 2em;
+    margin-top: 200px;
   }
 }
 main section.Portfolio .text {
@@ -497,7 +633,7 @@ main section.Portfolio .text {
 }
 @media screen and (min-width: 1380px) {
   main section.Portfolio .text {
-    margin-top: 60px;
+    margin-top: 100px;
   }
 }
 main section.Portfolio .text span:first-child {
@@ -681,11 +817,17 @@ main section.contents h1 {
 @media screen and (min-width: 1380px) {
   main section.contents h1 {
     font-size: 2em;
+    margin-top: 200px;
   }
 }
 main section.contents .contact-home {
   display: flex;
   margin-top: 30px;
+}
+@media screen and (min-width: 1380px) {
+  main section.contents .contact-home {
+    margin-top: 100px;
+  }
 }
 main section.contents .contact-home li {
   margin: 0 auto;
@@ -761,8 +903,10 @@ main section.contents form div.mail-form .left .configuration .write input::plac
     padding: 7px;
   }
 }
-main section.contents form div.mail-form .left .configuration .write .title {
-  margin-bottom: 0;
+@media screen and (min-width: 768px) {
+  main section.contents form div.mail-form .left .configuration .write .title {
+    margin-bottom: 0;
+  }
 }
 @media screen and (min-width: 768px) {
   main section.contents form div.mail-form .right {
