@@ -23,16 +23,32 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
 } */
 
-var slideIndex = 0;
+/* 상단바 고정 */
+var TopMenu, TopMenuPosition;
+TopMenu = document.getElementById('gnb');
+TopMenuPosition = TopMenu.offsetTop; 
+
+function gnb_fixed(){   
+  if ( window.pageYOffset >= TopMenuPosition ) {
+      TopMenu.classList.add("gnb");
+  } else {
+      TopMenu.classList.remove("gnb");
+  }
+}
+document.addEventListener('scroll',submenu_bar_fixed);
+
+
+
+/* function currentSlide(n) {
+  showSlides(slideIndex = n);
+} */
+
+/* var slideIndex = 0;
 showSlides(slideIndex);
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
-
-/* function currentSlide(n) {
-  showSlides(slideIndex = n);
-} */
 
 function showSlides(n) {
   var i;
@@ -42,13 +58,13 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";  
   }
-  /* for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  } */
+  for (i = 0; i < slides.length; i++) {
+    slides[i].className = slides[i].className.replace(" active", "");
+  }
   slides[slideIndex-1].style.display = "block";  
-  /* dots[slideIndex-1].className += " active"; */
+  slides[slideIndex-1].className += " active";
 }
-
+ */
 function myFunction() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
