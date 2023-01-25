@@ -1,22 +1,11 @@
-/* window.addEventListener('load', function() {
 
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const Spanoverlay = document.querySelector('.span-overlay')
+function openNav() {
+    document.getElementById("myNav").style.width = "40%";
+}
 
-    mobileMenu.onclick = function() {
-        Spanoverlay.classList.toggle('style-block');
-    }
-}); */
-
-/* window.onload = function() { */
-    function openNav() {
-        document.getElementById("myNav").style.width = "40%";
-    }
-    
-    function closeNav() {
-        document.getElementById("myNav").style.width = "0%";
-    }
-/* } */
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
 
 window.addEventListener('load', function() {
 
