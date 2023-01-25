@@ -1,72 +1,114 @@
-/* var slideIndex = 1;
-showSlides(slideIndex);
+/* window.addEventListener('load', function() {
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const Spanoverlay = document.querySelector('.span-overlay')
+
+    mobileMenu.onclick = function() {
+        Spanoverlay.classList.toggle('style-block');
+    }
+}); */
+
+/* window.onload = function() { */
+    function openNav() {
+        document.getElementById("myNav").style.width = "40%";
+    }
+    
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+    }
+/* } */
+
+window.addEventListener('load', function() {
+
+const $text = document.querySelector(".text");
+
+const letters = [
+"안녕하세요! \n 프론트엔드 개발자 정윤정입니다."
+];
+
+const speed = 100;
+let i = 0;
+
+const changeLineBreak = (letter) => {
+return letter.map(text => text === "\n" ? "<br>" : text);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+const typing = async () => {
+const letter = changeLineBreak(letters[i].split(""));
+
+while (letter.length) {
+await wait(speed);
+$text.innerHTML += letter.shift(); 
 }
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("text");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
+await wait(800);
 
-  slides[slideIndex-1].style.display = "block";
-} */
-
-/* 상단바 고정 */
-var TopMenu, TopMenuPosition;
-TopMenu = document.getElementById('gnb');
-TopMenuPosition = TopMenu.offsetTop; 
-
-function gnb_fixed(){   
-  if ( window.pageYOffset >= TopMenuPosition ) {
-      TopMenu.classList.add("gnb");
-  } else {
-      TopMenu.classList.remove("gnb");
-  }
-}
-document.addEventListener('scroll',submenu_bar_fixed);
-
-
-
-/* function currentSlide(n) {
-  showSlides(slideIndex = n);
-} */
-
-/* var slideIndex = 0;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+remove();
 }
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].className = slides[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  slides[slideIndex-1].className += " active";
-}
- */
-function myFunction() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
+const remove = async () => {
+const letter = changeLineBreak(letters[i].split(""));
+
+while (letter.length) {
+await wait(speed);
+
+letter.pop();
+$text.innerHTML = letter.join(""); 
 }
 
+i = !letters[i+1] ? 0 : i + 1;
+typing();
+}
+
+function wait(ms) {
+return new Promise(res => setTimeout(res, ms))
+}
+
+setTimeout(typing, 1500);
+});
+
+window.addEventListener('load',() =>{
+    let progressBars = document.querySelectorAll('.progress-bar');
+    let values = [
+        '90%',
+        '90%',
+        '85%',
+        '85%',
+        '80%',
+        '70%',
+        '65%',
+        '65%'
+    ];
+    progressBars.forEach((progress,index)=>{
+        progress.style.width = values[index];
+    })
+})
+
+
+window.addEventListener('load',() =>{
+
+    gsap.registerPlugin(ScrollTrigger);
+    const scroll_panels = gsap.utils.toArray('.horizontal-scroll .horizontal-panel');
+    const pin_panels = gsap.utils.toArray('.horizontal-pin .horizontal-panel');
+    
+    gsap.to(scroll_panels, {
+      xPercent: -100 * (scroll_panels.length - 1),
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.horizontal-scroll',
+        pin: true,
+        scrub: 0.6,
+        end: () => "+=" + document.querySelector('.horizontal-scroll').offsetWidth * scroll_panels.length
+      }
+    });
+    
+    pin_panels.forEach((panel, i) => {
+      ScrollTrigger.create({
+        trigger: panel,
+        pin: true,
+        pinSpacing: false,
+        start: 'top top'
+      });
+    });
+  });
+  

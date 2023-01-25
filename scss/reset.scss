@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+.ir_su {
+	overflow:hidden;
+	position:absolute;
+	width:0px;
+	height:0px;
+    line-height:0;
+	text-indent:-9999px;
+	font-size:0;
+}
+
 body {
     font: {
         size: 16px;
@@ -36,8 +46,4 @@ h2 {
 
 h3 {
     font-size: 1.2em;
-}
-
-p {
-    font-size: 0.8em;
 }
