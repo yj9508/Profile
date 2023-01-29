@@ -414,10 +414,6 @@ main section.About-me .flex .slideshow-container .mySlides .slideText p {
   line-height: 40px;
   color: #34314c;
   text-align: justify;
-  /* @include responsive(tablet-screens) {
-      margin-left: 60px;
-      font-size: 16px;
-  } */
 }
 @media screen and (min-width: 1380px) {
   main section.About-me .flex .slideshow-container .mySlides .slideText p {
@@ -520,18 +516,15 @@ main section.Skills #center {
 }
 main section.Skills #modal {
   position: fixed;
-  /* position: relative; */
   margin: 0 auto;
   right: 50%;
   top: 50%;
   transform: translate(50%, -50%);
   width: 100%;
-  /* height: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background: rgba(0, 0, 0, 0.8); */
   z-index: 999;
   transition: all 0.5s;
   display: none;

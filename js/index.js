@@ -145,18 +145,7 @@ function SendMail() {
   var email = document.getElementById("email");
   var title = document.getElementById("title");
   var message = document.getElementById("message");
-  // var emailIdCheck = /[`~!@#$%^&*|\\\'\";:\/?]/gi;
-  
-  // var emailRegex = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/gi;
-  // var input = document.getElementById("email").value;
-  // var email_format = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,3}$/;
   var emailCheck = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z]{3,9})*\.[a-zA-Z]{3,3}$/;
-
-
-  // var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-// var email = document.getElementById('useremail').value;
-
 
   if (name.value == "") {
     alert("이름을 입력하세요.");
