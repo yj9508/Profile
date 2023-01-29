@@ -9,18 +9,26 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('naCydP5QygvpZ_0HG')
+        })();
+    </script>
     <script type="text/javascript" src="./js/index.js"></script>
     <script type="text/javascript" src="./js/aboutMe.js"></script>
+    <script src="./js/popup.js"></script>
     <title>Document</title>
 </head>
 <body>
     <header id="header">
         <div class="container">
             <div class="bg-flex">
-                <div class="bg-img">
-                    <!-- <img src="./img/bg.png" alt=""> -->
-                </div>
-    
+                <div class="bg-img"></div>
+
                 <div class="flex-box">
                     <div class="logo">
                         <img src="./img/logo.png" alt="로고">
@@ -79,7 +87,7 @@
                 <div class="flex">
                     <div class="my-img">
                         <!-- <img src="" alt="정윤정"> -->
-                        <img src="./img/bg-img.png" alt="">
+                        <img src="./img/bg-img.png" alt="my-img">
                     </div>
                     <div class="slideshow-container">
                         <div class="mySlides">
@@ -111,82 +119,169 @@
             <div class="container">
                 <h1>Skills</h1>
                 <div class="progress-box">
+
+                    <div id="modal">
+                        <div id="center">
+                            <img class="close" src="img/close_white.png" alt="닫기">
+                            <div class="photo"></div>
+                        </div>
+                    </div>
+
                     <div class="left">
-                        <a href="">
-                            <div class="progress-line">
+                        <div class="bar-thumbnail">
+                            <div class="thumbnail">
+                                <img src="./img/html5.png" alt="html5">                            
                                 <p>HTML</p>
+                                <pre>
+                                    웹 문서를 제작하는데 쓰이는
+        
+                                    가장 기본적인 언어인 만큼
+                                
+                                    웹 표준을 지키며 코딩을 합니다.
+                                </pre>
+                            </div>
+                            <div id="btn" class="progress-line">
                                 <div class="progress">
                                     <div class="progress-bar">      
                                     </div>
                                 </div>
                             </div>
-                        </a>
-                        <a href="">
-                            <div class="progress-line">
+                        </div>
+                        <div class="bar-thumbnail">                      
+                            <div class="thumbnail">
+                                <img src="./img/css3.png" alt="css3">                            
                                 <p>CSS</p>
+                                <pre>
+                                    웹 문서를 제작하는데 쓰이는
+        
+                                    가장 기본적인 언어인 만큼
+                                
+                                    웹 표준을 지키며 코딩을 합니다.
+                                </pre>
+                            </div>
+                            <div id="btn" class="progress-line">
                                 <div class="progress">
-                                    <p></p>
-                                    <div class="progress-bar">   
+                                    <div class="progress-bar">      
                                     </div>
                                 </div>
                             </div>
-                        </a>
-                        <a href="">
-                            <div class="progress-line">
+                        </div>
+                        <div class="bar-thumbnail">                      
+                            <div class="thumbnail">
+                                <img src="./img/scss.png" alt="scss" class="size">                            
                                 <p>SCSS</p>
+                                <pre>
+                                    웹 문서를 제작하는데 쓰이는
+        
+                                    가장 기본적인 언어인 만큼
+                                
+                                    웹 표준을 지키며 코딩을 합니다.
+                                </pre>
+                            </div>
+                            <div id="btn" class="progress-line">
                                 <div class="progress">
                                     <div class="progress-bar">      
                                     </div>
                                 </div>
                             </div>
-                        </a>
-                        <a href="">
-                            <div class="progress-line">
-                                <p>JavaScript</p>
+                        </div>
+                        <div class="bar-thumbnail">                      
+                            <div class="thumbnail">
+                                <img src="./img/JS.png" alt="js">                            
+                                <p>JS</p>
+                                <pre>
+                                    웹 문서를 제작하는데 쓰이는
+        
+                                    가장 기본적인 언어인 만큼
+                                
+                                    웹 표준을 지키며 코딩을 합니다.
+                                </pre>
+                            </div>
+                            <div id="btn" class="progress-line">
                                 <div class="progress">
                                     <div class="progress-bar">      
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="right">
-                        <a href="">
-                            <div class="progress-line">
+                        <div class="bar-thumbnail">                      
+                            <div class="thumbnail">
+                                <img src="./img/jquery.png" alt="jquery" class="size">                            
                                 <p>JQuery</p>
+                                <pre>
+                                    웹 문서를 제작하는데 쓰이는
+        
+                                    가장 기본적인 언어인 만큼
+                                
+                                    웹 표준을 지키며 코딩을 합니다.
+                                </pre>
+                            </div>
+                            <div id="btn" class="progress-line">
                                 <div class="progress">
                                     <div class="progress-bar">      
                                     </div>
                                 </div>
                             </div>
-                        </a>
-                        <a href="">
-                            <div class="progress-line">
+                        </div>
+                        <div class="bar-thumbnail">                      
+                            <div class="thumbnail">
+                                <img src="./img/react.png" alt="react">                            
                                 <p>REACT</p>
+                                <pre>
+                                    웹 문서를 제작하는데 쓰이는
+        
+                                    가장 기본적인 언어인 만큼
+                                
+                                    웹 표준을 지키며 코딩을 합니다.
+                                </pre>
+                            </div>
+                            <div id="btn" class="progress-line">
                                 <div class="progress">
                                     <div class="progress-bar">      
                                     </div>
                                 </div>
                             </div>
-                        </a>
-                        <a href="">
-                            <div class="progress-line">
+                        </div>
+                        <div class="bar-thumbnail">                      
+                            <div class="thumbnail">
+                                <img src="./img/ps.png" alt="ps" class="size">                            
                                 <p>PS</p>
+                                <pre>
+                                    웹 문서를 제작하는데 쓰이는
+        
+                                    가장 기본적인 언어인 만큼
+                                
+                                    웹 표준을 지키며 코딩을 합니다.
+                                </pre>
+                            </div>
+                            <div id="btn" class="progress-line">
                                 <div class="progress">
                                     <div class="progress-bar">      
                                     </div>
                                 </div>
                             </div>
-                        </a>
-                        <a href="">
-                            <div class="progress-line">
+                        </div>
+                        <div class="bar-thumbnail">                      
+                            <div class="thumbnail">
+                                <img src="./img/ai.png" alt="ai" class="size">                            
                                 <p>AI</p>
+                                <pre>
+                                    웹 문서를 제작하는데 쓰이는
+        
+                                    가장 기본적인 언어인 만큼
+                                
+                                    웹 표준을 지키며 코딩을 합니다.
+                                </pre>
+                            </div>
+                            <div id="btn" class="progress-line">
                                 <div class="progress">
                                     <div class="progress-bar">      
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -198,11 +293,17 @@
                 <h2 class="ir_su">웹사이트 소개부분 </h2>
                 <div class="section horizontal-scroll">
                     <div class="horizontal-panel a">
-                        <div class="panel_box_wrap">
+                        <!-- <div class="panel_box_wrap"> -->
                             <div class="panel_box">
                                 <div class="panel_img">
                                     <span class="fixed_num">01</span>
-                                    <img src="./img/portfolio/img01.png" alt="random pic">
+                                    <div class="slide-wrap">
+                                        <div class="slide">
+                                            <div class="img-slide">
+                                                <img src="./img/portfolio/img01.png" alt="세븐틴 홈페이지">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="panel_text">
                                     <h3>SEVENTEEN Homepage</h3>
@@ -219,7 +320,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        <!-- </div> -->
                     </div>
                     <!--// horizontal-pane1 -->
                     <div class="horizontal-panel b">
@@ -227,7 +328,13 @@
                             <div class="panel_box">
                                 <div class="panel_img">
                                     <span class="fixed_num">02</span>
-                                    <img src="./img/portfolio/img01.png" alt="random pic">
+                                    <div class="slide-wrap">
+                                        <div class="slide">
+                                            <div class="img-slide">
+                                                <img src="./img/portfolio/img01.png" alt="자바스크립트">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="panel_text">
                                     <h3>SEVENTEEN Homepage</h3>
@@ -250,7 +357,13 @@
                             <div class="panel_box">
                                 <div class="panel_img">
                                     <span class="fixed_num">03</span>
-                                    <img src="./img/portfolio/img01.png" alt="random pic">
+                                    <div class="slide-wrap">
+                                        <div class="slide">
+                                            <div class="img-slide">
+                                                <img src="./img/portfolio/img01.png" alt="자바스크립트">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="panel_text">
                                     <h3>SEVENTEEN Homepage</h3>
@@ -268,12 +381,18 @@
                         </div>
                     </div>
 
-                    <div class="horizontal-panel d">
+                   <!--  <div class="horizontal-panel d">
                         <div class="panel_box_wrap">
                             <div class="panel_box">
                                 <div class="panel_img">
                                     <span class="fixed_num">04</span>
-                                    <img src="./img/portfolio/img01.png" alt="random pic">
+                                    <div class="slide-wrap">
+                                        <div class="slide">
+                                            <div class="img-slide">
+                                                <img src="./img/portfolio/img01.png" alt="random pic">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="panel_text">
                                     <h3>SEVENTEEN Homepage</h3>
@@ -296,7 +415,13 @@
                             <div class="panel_box">
                                 <div class="panel_img">
                                     <span class="fixed_num">05</span>
-                                    <img src="./img/portfolio/img01.png" alt="random pic">
+                                    <div class="slide-wrap">
+                                        <div class="slide">
+                                            <div class="img-slide">
+                                                <img src="./img/portfolio/img01.png" alt="random pic">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="panel_text">
                                     <h3>SEVENTEEN Homepage</h3>
@@ -312,7 +437,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -321,10 +446,10 @@
             <div class="container">
                 <h1>Contact</h1>
                 <ul class="contact-home">
-                    <li class="email">E-mail <p>mine9508@gmail.com</p></li>
+                    <li class="email">Email <p>mine9508@gmail.com</p></li>
                     <li class="github">GitHub<p>https://github.com/</p></li>
                 </ul>
-                <form action="" method="POST" name="contact">
+                <form action="" id="contact" method="POST" name="contact">
                     <div class="mail-form">
                         <div class="left">
                             <div class="configuration">
@@ -354,7 +479,9 @@
                         </div>
                     </div>
                     <div class="btn-wrap center">
-                        <button class="btn">SEND</button>
+                        <button class="btn btn-primary" type="submit"
+                        name="submit"
+                        id="btn submit" onclick="SendMail()">SEND</button>
                     </div>
                 </form>
             </div>

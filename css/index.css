@@ -50,6 +50,11 @@ html {
   overflow-x: hidden;
 }
 
+body.stop-scroll {
+  height: 100%;
+  overflow-y: hidden;
+}
+
 .container {
   position: relative;
   margin: 0 auto;
@@ -319,7 +324,6 @@ main section.About-me h1 {
 }
 @media screen and (min-width: 768px) {
   main section.About-me .flex {
-    display: flex;
     margin: 0 auto;
     width: 81.0144927536%;
     margin-top: 50px;
@@ -334,7 +338,7 @@ main section.About-me h1 {
 }
 main section.About-me .flex .my-img {
   text-align: center;
-  margin-top: 60px;
+  margin: 10vh 0 0 0;
 }
 main section.About-me .flex .my-img img {
   vertical-align: bottom;
@@ -362,17 +366,14 @@ main section.About-me .flex .slideshow-container .arrow {
   position: absolute;
   right: 0;
   top: -30px;
-}
-@media screen and (min-width: 768px) {
-  main section.About-me .flex .slideshow-container .arrow {
-    top: 0;
-    left: 315px;
-  }
+  /* @include responsive(tablet-screens) {
+      top: 0;
+  } */
 }
 @media screen and (min-width: 1380px) {
   main section.About-me .flex .slideshow-container .arrow {
-    left: 626px;
-    margin-top: 20px;
+    left: 632px;
+    margin-top: 70px;
   }
 }
 main section.About-me .flex .slideshow-container .arrow a:first-child {
@@ -382,29 +383,26 @@ main section.About-me .flex .slideshow-container .mySlides .slideText {
   margin-top: 30px;
   line-height: 30px;
   text-align: justify;
-}
-@media screen and (min-width: 768px) {
-  main section.About-me .flex .slideshow-container .mySlides .slideText {
-    margin-top: 60px;
-    margin-left: auto;
-    font-size: 18px;
-    width: 80%;
-  }
+  /* @include responsive(tablet-screens) {
+      margin-top: 60px;
+      margin-left: auto;
+      font-size: 18px;
+      width: 80%;
+  } */
 }
 @media screen and (min-width: 1380px) {
   main section.About-me .flex .slideshow-container .mySlides .slideText {
     width: 80%;
-    margin-top: 54px;
+    margin-top: 70px;
+    margin-left: 136px;
   }
 }
 main section.About-me .flex .slideshow-container .mySlides .slideText.right {
   display: none;
-}
-@media screen and (min-width: 768px) {
-  main section.About-me .flex .slideshow-container .mySlides .slideText.right {
-    white-space: nowrap;
-    width: 61%;
-  }
+  /* @include responsive(tablet-screens) {
+      white-space: nowrap;
+      width: 61%;
+  } */
 }
 @media screen and (min-width: 1380px) {
   main section.About-me .flex .slideshow-container .mySlides .slideText.right {
@@ -416,12 +414,10 @@ main section.About-me .flex .slideshow-container .mySlides .slideText p {
   line-height: 40px;
   color: #34314c;
   text-align: justify;
-}
-@media screen and (min-width: 768px) {
-  main section.About-me .flex .slideshow-container .mySlides .slideText p {
-    margin-left: 60px;
-    font-size: 16px;
-  }
+  /* @include responsive(tablet-screens) {
+      margin-left: 60px;
+      font-size: 16px;
+  } */
 }
 @media screen and (min-width: 1380px) {
   main section.About-me .flex .slideshow-container .mySlides .slideText p {
@@ -442,7 +438,7 @@ main section.Skills h1 {
 @media screen and (min-width: 1380px) {
   main section.Skills h1 {
     font-size: 2em;
-    margin-top: 200px;
+    margin-top: 150px;
   }
 }
 main section.Skills a {
@@ -452,11 +448,16 @@ main section.Skills .progress-box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 60px;
+  margin: 10vh 0;
 }
 @media screen and (min-width: 768px) {
   main section.Skills .progress-box {
     flex-direction: row;
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.Skills .progress-box {
+    margin: 14vh 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -465,26 +466,145 @@ main section.Skills .progress-box .right {
     width: 48%;
   }
 }
+main section.Skills .bar-thumbnail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+}
+@media screen and (min-width: 768px) {
+  main section.Skills .bar-thumbnail {
+    margin-bottom: 35px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.Skills .bar-thumbnail {
+    margin-bottom: 40px;
+  }
+}
+main section.Skills .thumbnail:first-child,
+main section.Skills .thumbnail:nth-child(6) {
+  margin-left: 0;
+}
+main section.Skills .thumbnail:nth-child(5),
+main section.Skills .thumbnail:nth-child(10) {
+  margin-right: 0;
+}
+main section.Skills .thumbnail:nth-child(11),
+main section.Skills .thumbnail:nth-child(12),
+main section.Skills .thumbnail:last-child {
+  margin-bottom: 0;
+}
+main section.Skills .thumbnail > img {
+  width: 145px;
+  height: 180px;
+  display: none;
+}
+main section.Skills .thumbnail > p {
+  cursor: pointer;
+}
+main section.Skills .photo img {
+  width: 100px;
+}
+main section.Skills .thumbnail > pre {
+  display: none;
+}
+main section.Skills pre {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-left: -282px;
+  color: black;
+}
+main section.Skills #center {
+  position: relative;
+}
+main section.Skills #modal {
+  position: fixed;
+  /* position: relative; */
+  margin: 0 auto;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: rgba(0, 0, 0, 0.8); */
+  z-index: 999;
+  transition: all 0.5s;
+  display: none;
+  opacity: 0;
+}
+main section.Skills #modal.show {
+  display: block;
+  opacity: 1;
+}
+main section.Skills image.show {
+  display: block;
+  opacity: 1;
+}
+main section.Skills .photo {
+  display: flex;
+  justify-content: center;
+  width: 87.923077%;
+  padding: 80px;
+  border: 1px solid gray;
+  background-color: white;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  main section.Skills .photo {
+    width: 600px;
+    padding: 100px;
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.Skills .photo {
+    width: 700px;
+    padding: 100px;
+  }
+}
+main section.Skills .close {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  /* left: 10px;
+  top: 10px */
+  background: black;
+  cursor: pointer;
+}
+@media screen and (min-width: 1380px) {
+  main section.Skills .close {
+    left: 880px;
+    top: 100px;
+  }
+}
 main section.Skills .progress-box .progress-line {
   width: 100%;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
+  margin-bottom: 0;
 }
 @media screen and (min-width: 768px) {
   main section.Skills .progress-box .progress-line {
     display: flex;
     align-items: center;
-    margin-bottom: 25px;
   }
 }
-@media screen and (min-width: 1380px) {
-  main section.Skills .progress-box .progress-line {
-    margin-bottom: 30px;
-  }
+main section.Skills button {
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
 }
 main section.Skills p {
   width: 30%;
+  color: #34314c;
+  font-size: 16px;
+  font-weight: 600;
 }
 @media screen and (min-width: 768px) {
   main section.Skills p {
@@ -497,18 +617,19 @@ main section.Skills p {
   }
 }
 main section.Skills .progress-box .progress-line .progress {
-  width: 60vw;
+  width: 70vw;
   background-color: #b1b1b1;
-  height: 18px;
+  height: 24px;
 }
 @media screen and (min-width: 768px) {
   main section.Skills .progress-box .progress-line .progress {
-    height: 21px;
+    width: 36vw;
+    height: 26px;
   }
 }
 @media screen and (min-width: 1380px) {
   main section.Skills .progress-box .progress-line .progress {
-    height: 24px;
+    height: 28px;
   }
 }
 main section.Skills .progress-box .progress-line .progress .progress-bar {
@@ -517,6 +638,22 @@ main section.Skills .progress-box .progress-line .progress .progress-bar {
   background-color: #34314c;
   position: relative;
   transition: all 5s;
+}
+main section.Portfolio {
+  /* .horizontal-panel .panel_box {
+      margin: 3vh 0 3vw 0;
+
+      @include responsive(tablet-screens) {
+          margin: 20vh 0 3vw 0;
+      }
+
+      @include responsive(pc-screens) {
+          margin: 10vh 0 3vw 0;
+      }
+  } */
+  /*  html {
+       font-size:12px;
+   } */
 }
 main section.Portfolio h1 {
   color: #ff7473;
@@ -532,7 +669,47 @@ main section.Portfolio h1 {
 @media screen and (min-width: 1380px) {
   main section.Portfolio h1 {
     font-size: 2em;
-    margin-top: 200px;
+    margin-top: 130px;
+  }
+}
+main section.Portfolio .slide-wrap {
+  position: relative;
+}
+main section.Portfolio .img-slide {
+  transition: transform 6s cubic-bezier(0, 0, 0.58, 1);
+}
+@media screen and (min-width: 768px) {
+  main section.Portfolio .img-slide {
+    transition: transform 5s cubic-bezier(0, 0, 0.58, 1);
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.Portfolio .img-slide {
+    transition: transform 4s cubic-bezier(0, 0, 0.58, 1);
+  }
+}
+main section.Portfolio .img-slide:hover {
+  transform: translateY(calc(-100% + 400px));
+}
+main section.Portfolio .slide {
+  position: absolute;
+  top: -3%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 426px;
+  height: 450px;
+  font-size: 0;
+  overflow: hidden;
+  /* @include responsive(tablet-screens) {
+      width: 600px;        
+      height: 575px;
+  } */
+}
+@media screen and (min-width: 1380px) {
+  main section.Portfolio .slide {
+    width: 750px;
+    height: 640px;
+    margin-left: 70px;
   }
 }
 main section.Portfolio [class*=button-] {
@@ -599,11 +776,9 @@ main section.Portfolio .horizontal-scroll {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 main section.Portfolio .horizontal-panel {
-  display: flex;
-  flex-direction: column;
   flex-shrink: 0;
   justify-content: space-between;
   min-width: 80vw;
@@ -611,7 +786,9 @@ main section.Portfolio .horizontal-panel {
 }
 @media screen and (min-width: 768px) {
   main section.Portfolio .horizontal-panel {
-    min-width: 95.5vw;
+    display: flex;
+    flex-direction: column;
+    min-width: 100vw;
     height: 100vh;
   }
 }
@@ -622,19 +799,20 @@ main section.Portfolio .horizontal-panel {
 }
 main section.Portfolio .horizontal-panel .panel_box {
   width: 160vw;
-  flex-direction: column;
+  margin: 10vh 0;
   height: 67.5vh;
-  margin: 16vh 0;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
 @media screen and (min-width: 768px) {
   main section.Portfolio .horizontal-panel .panel_box {
+    flex-direction: row;
     width: 82vw;
   }
 }
 main section.Portfolio .horizontal-panel .panel_img {
-  width: 58%;
+  width: 54%;
   height: 100%;
   position: relative;
 }
@@ -649,39 +827,48 @@ main section.Portfolio .horizontal-panel .panel_img .fixed_num {
   color: #ebebeb;
   text-shadow: -1px 0 #868686, 0 1px #868686, 1px 0 #868686, 0 -1px #868686;
 }
+@media screen and (min-width: 1380px) {
+  main section.Portfolio .horizontal-panel .panel_img .fixed_num {
+    margin-top: -60px;
+  }
+}
 main section.Portfolio .horizontal-panel .panel_img img {
-  width: 92%;
+  width: 87%;
   -o-object-position: top;
      object-position: top;
-  height: 450px;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-left: 30px;
 }
 @media screen and (min-width: 768px) {
   main section.Portfolio .horizontal-panel .panel_img img {
     width: 100%;
-    height: 550px;
+    margin-left: 41px;
   }
 }
 @media screen and (min-width: 1380px) {
   main section.Portfolio .horizontal-panel .panel_img img {
-    margin-top: 2.6rem;
-    height: 750px;
+    margin-left: 0;
   }
 }
 main section.Portfolio .horizontal-panel .panel_text {
   height: 100%;
   width: 60%;
   text-align: justify;
+  position: relative;
+  top: 200px;
 }
 @media screen and (min-width: 768px) {
   main section.Portfolio .horizontal-panel .panel_text {
     width: 35%;
+    top: 0;
+    left: 70px;
   }
 }
 @media screen and (min-width: 1380px) {
   main section.Portfolio .horizontal-panel .panel_text {
-    margin-top: 35px;
+    width: 31%;
+    left: 69px;
     height: 750px;
   }
 }
@@ -695,7 +882,7 @@ main section.Portfolio .horizontal-panel .panel_text h3 {
 }
 @media screen and (min-width: 768px) {
   main section.Portfolio .horizontal-panel .panel_text h3 {
-    font-size: 2.6vw;
+    font-size: 1.8vw;
   }
 }
 main section.Portfolio .horizontal-panel .panel_text .text p {
@@ -720,80 +907,16 @@ main section.Portfolio .horizontal-panel .panel_text .text p {
   main section.Portfolio html {
     font-size: 12px;
   }
-  main section.Portfolio .horizontal-panel .panel_box {
-    flex-direction: row;
-    margin: 12vh 0;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 768px) {
-  main section.Portfolio .horizontal-panel .panel_box {
-    margin: 20vh 0 0 0;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 1380px) {
-  main section.Portfolio .horizontal-panel .panel_box {
-    margin: 20vh 0 0 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  main section.Portfolio .horizontal-panel .panel_img, main section.Portfolio .horizontal-panel .panel_text {
-    margin-left: 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  main section.Portfolio .horizontal-panel .panel_img .fixed_num {
-    left: 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  main section.Portfolio .horizontal-pin .pl_one .marquee-track h4 {
-    font-size: 17vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  main section.Portfolio .horizontal-pin .pin_two .cont li {
-    width: 47%;
-  }
-}
-@media screen and (min-width: 768px) {
-  main section.Portfolio .horizontal-pin .pin_two {
-    width: 90%;
-  }
-}
-@media screen and (min-width: 768px) {
-  main section.Portfolio .horizontal-pin .pin_two .cont li {
-    width: 48%;
-  }
-}
-@media screen and (min-width: 768px) {
-  main section.Portfolio .common_next_wrap .next_area a .small_skill_text {
-    margin-left: 10%;
-  }
-}
-main section.Portfolio html {
-  font-size: 12px;
-}
-main section.Portfolio .horizontal-panel .panel_box {
-  margin: 10vh 0 3vw 0;
-}
-@media screen and (min-width: 768px) {
-  main section.Portfolio .horizontal-panel .panel_box {
-    margin: 20vh 0 3vw 0;
-  }
-}
-@media screen and (min-width: 1380px) {
-  main section.Portfolio .horizontal-panel .panel_box {
-    margin: 10vh 0 3vw 0;
-  }
 }
 main section.Portfolio .horizontal-panel .panel_img .fixed_num {
-  left: 0;
+  left: 7px;
+  z-index: 1;
 }
 main section.contents h1 {
   color: #ff7473;
   text-decoration: underline;
   text-decoration-thickness: 4px;
-  margin-top: 60px;
+  margin: 16vh 0 0 0;
 }
 @media screen and (min-width: 768px) {
   main section.contents h1 {
@@ -803,12 +926,12 @@ main section.contents h1 {
 @media screen and (min-width: 1380px) {
   main section.contents h1 {
     font-size: 2em;
-    margin-top: 200px;
+    margin-top: 150px;
   }
 }
 main section.contents .contact-home {
   display: flex;
-  margin-top: 30px;
+  margin: 10vh 0 0 0;
 }
 @media screen and (min-width: 1380px) {
   main section.contents .contact-home {
@@ -936,7 +1059,7 @@ main section.contents form div.mail-form .right .write textarea::placeholder {
 @media screen and (min-width: 768px) {
   main section.contents form div.mail-form .right .write textarea {
     padding: 7px;
-    height: 191px;
+    height: 193px;
   }
 }
 main section.contents form .btn-wrap {
