@@ -474,7 +474,7 @@ main {
         }
         
         .photo img {
-            width: 100px;
+            width: 90px;
         }
 
         .thumbnail > pre {
@@ -485,8 +485,9 @@ main {
             display: flex;
             align-items: center;
             font-weight: bold;
-            margin-left: -282px;
+            margin-left: -310px;
             color: black;
+            font-size: 15px;
         }
         
         #center {
@@ -526,7 +527,7 @@ main {
         .photo{
             display: flex;
             justify-content: center;
-            width: 87.923077%;
+            width: 97.923077%;
             padding: 80px;
             border:1px solid gray;
             background-color: white;
@@ -545,16 +546,20 @@ main {
         
         .close {
             position: absolute;
-            top: 0;
-            right: 30px;
+            // top: 0;
+            right: 5px;
             /* left: 10px;
             top: 10px */;
             background: black;
             cursor: pointer;
+            
+
+            @include responsive(tablet-screens) {
+                left: 694px;
+            }
 
             @include responsive(pc-screens) {
-                left: 880px;
-                top: 100px;
+                left: 1075px;
             }
         }
 
@@ -769,7 +774,7 @@ main {
         }
         .horizontal-panel .panel_box {
             width: 160vw;
-            margin: 10vh 0;
+            margin: 6vh 0;
             height:67.5vh;
             display:flex;
             justify-content:space-between;
@@ -778,6 +783,10 @@ main {
             @include responsive(tablet-screens) {
                 flex-direction: row;
                 width:82vw;
+            }
+
+            @include responsive(pc-screens) {
+                margin: 14vh 0;
             }
             
         }

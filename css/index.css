@@ -499,7 +499,7 @@ main section.Skills .thumbnail > p {
   cursor: pointer;
 }
 main section.Skills .photo img {
-  width: 100px;
+  width: 90px;
 }
 main section.Skills .thumbnail > pre {
   display: none;
@@ -508,8 +508,9 @@ main section.Skills pre {
   display: flex;
   align-items: center;
   font-weight: bold;
-  margin-left: -282px;
+  margin-left: -310px;
   color: black;
+  font-size: 15px;
 }
 main section.Skills #center {
   position: relative;
@@ -541,7 +542,7 @@ main section.Skills image.show {
 main section.Skills .photo {
   display: flex;
   justify-content: center;
-  width: 87.923077%;
+  width: 97.923077%;
   padding: 80px;
   border: 1px solid gray;
   background-color: white;
@@ -561,17 +562,20 @@ main section.Skills .photo {
 }
 main section.Skills .close {
   position: absolute;
-  top: 0;
-  right: 30px;
+  right: 5px;
   /* left: 10px;
   top: 10px */
   background: black;
   cursor: pointer;
 }
+@media screen and (min-width: 768px) {
+  main section.Skills .close {
+    left: 694px;
+  }
+}
 @media screen and (min-width: 1380px) {
   main section.Skills .close {
-    left: 880px;
-    top: 100px;
+    left: 1075px;
   }
 }
 main section.Skills .progress-box .progress-line {
@@ -792,7 +796,7 @@ main section.Portfolio .horizontal-panel {
 }
 main section.Portfolio .horizontal-panel .panel_box {
   width: 160vw;
-  margin: 10vh 0;
+  margin: 6vh 0;
   height: 67.5vh;
   display: flex;
   justify-content: space-between;
@@ -802,6 +806,11 @@ main section.Portfolio .horizontal-panel .panel_box {
   main section.Portfolio .horizontal-panel .panel_box {
     flex-direction: row;
     width: 82vw;
+  }
+}
+@media screen and (min-width: 1380px) {
+  main section.Portfolio .horizontal-panel .panel_box {
+    margin: 14vh 0;
   }
 }
 main section.Portfolio .horizontal-panel .panel_img {
