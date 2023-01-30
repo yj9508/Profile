@@ -1,15 +1,18 @@
-// 텍스트 효과
+// 메뉴바
 function openNav() {
-    document.getElementById("myNav").style.width = "40%";
+  document.getElementById("myNav").style.width = "40%";
 }
 
 function closeNav() {
-    document.getElementById("myNav").style.width = "0%";
+  document.getElementById("myNav").style.width = "0%";
 }
 
+
+// 텍스트 효과
 window.addEventListener('load', function() {
 
 const $text = document.querySelector(".text");
+
 
 const letters = [
 "안녕하세요! \n 프론트엔드 개발자 정윤정입니다."

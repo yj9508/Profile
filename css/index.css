@@ -811,7 +811,7 @@ main section.Portfolio .horizontal-panel .panel_box {
 }
 @media screen and (min-width: 1380px) {
   main section.Portfolio .horizontal-panel .panel_box {
-    margin: 14vh 0;
+    margin: 14vh 0 0 0;
   }
 }
 main section.Portfolio .horizontal-panel .panel_img {
@@ -846,11 +846,7 @@ main section.Portfolio .horizontal-panel .panel_img img {
 @media screen and (min-width: 768px) {
   main section.Portfolio .horizontal-panel .panel_img img {
     width: 100%;
-    margin-left: 41px;
-  }
-}
-@media screen and (min-width: 1380px) {
-  main section.Portfolio .horizontal-panel .panel_img img {
+    /* margin-left: 41px; */
     margin-left: 0;
   }
 }
@@ -919,17 +915,18 @@ main section.contents h1 {
   color: #ff7473;
   text-decoration: underline;
   text-decoration-thickness: 4px;
-  margin: 16vh 0 0 0;
+  margin: 0;
 }
 @media screen and (min-width: 768px) {
   main section.contents h1 {
     font-size: 1.6em;
+    margin: 16vh 0 0 0;
   }
 }
 @media screen and (min-width: 1380px) {
   main section.contents h1 {
     font-size: 2em;
-    margin-top: 150px;
+    margin: 0;
   }
 }
 main section.contents .contact-home {
