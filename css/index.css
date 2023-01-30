@@ -627,6 +627,7 @@ main section.Skills .progress-box .progress-line .progress {
 @media screen and (min-width: 1380px) {
   main section.Skills .progress-box .progress-line .progress {
     height: 28px;
+    width: 28vw;
   }
 }
 main section.Skills .progress-box .progress-line .progress .progress-bar {

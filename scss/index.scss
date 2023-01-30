@@ -611,6 +611,7 @@ main {
 
             @include responsive(pc-screens) {
                 height: 28px;
+                width: 28vw;
             }
         }
         .progress-box .progress-line .progress .progress-bar{
